@@ -22,10 +22,17 @@ group :production do
   gem 'pg'
 end
 
-
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Гем, который использует rspec, чтобы смотреть наш сайт
+  gem 'capybara'
+  gem 'faker'
+  # Гем, который позволяет смотреть, что видит capybara
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'sqlite3'
+
 end
 
 group :development do
