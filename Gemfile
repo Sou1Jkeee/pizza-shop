@@ -5,6 +5,8 @@ ruby '2.6.5'
 
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 
+gem 'devise'
+gem 'devise-i18n'
 gem 'jquery-rails'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -20,19 +22,20 @@ gem 'materialize-sass'
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Гем, который использует rspec, чтобы смотреть наш сайт
   gem 'capybara'
+  gem 'dotenv-rails'
   gem 'faker'
   # Гем, который позволяет смотреть, что видит capybara
   gem 'launchy'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'sqlite3'
-
 end
 
 group :development do
