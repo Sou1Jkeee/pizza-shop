@@ -3,9 +3,50 @@ html
   head
     title
       | PizzaShop
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    nav.amber.accent-2 role="navigation"
+      .nav-wrapper.container
+        #logo-container.brand-logo.left
+          = link_to image_tag('pizza-logo.png'), root_path
+        ul.right
+          ul
+            li
+              = link_to material_icon.shopping_cart, root_path
+            - if user_signed_in?
+              li
+                = link_to 'Профиль', current_user
+              li
+                = link_to 'Выход', destroy_user_session_path, method: :delete
+            - else
+              li
+                = link_to 'Войти', new_user_session_path
+              li
+                = link_to 'Зарегистрироваться', new_user_registration_path
+    main
+      = yield
+    footer.page-footer.footer-bottom.amber.accent-2.lime-text.text-darken-4
+      .container
+        .row
+          .col.l6.s12
+            h5
+              | Footer Content
+            p
+              | You can use rows and columns here to organize your footer content.
+          .col.l4.offset-l2.s12
+            h5
+              | Links
+            ul
+              li link
+              li link
+      .footer-copyright.center.lime-text.text-darken-4
+        .container
+          p.
+            | &copy;
+            =<> t('app.company')
+            | 2019-
+            = DateTime.now.year

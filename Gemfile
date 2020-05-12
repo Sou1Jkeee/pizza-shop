@@ -9,11 +9,11 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
 gem 'puma', '~> 3.11'
+gem 'rmagick'
 gem 'sass-rails', '~> 5.0'
+gem 'sidekiq'
 gem 'slim'
 gem 'slim-rails'
-gem 'sidekiq'
-gem 'rmagick'
 gem 'uglifier', '>= 1.3.0'
 
 # Materialize styles, icons, etc.
@@ -31,6 +31,7 @@ group :development, :test do
   gem 'capybara'
   gem 'dotenv-rails'
   gem 'faker'
+  gem 'factory_bot_rails'
   # Гем, который позволяет смотреть, что видит capybara
   gem 'launchy'
   gem 'rspec-rails'
