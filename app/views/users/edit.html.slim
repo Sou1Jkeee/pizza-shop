@@ -1,8 +1,24 @@
-h1 Editing user
-
-== render 'form'
-
-=> link_to 'Show', @user
-'|
-=< link_to 'Back', users_path
-
+.row
+  h1.center Редактирование профиля
+  = form_for(@user, multipart: true) do |f|
+      .row.col.s4
+      .row.col.s6
+        form
+          .row.col.s8
+            .input-field
+              = f.label :name
+              = f.text_field :name, class: 'validate'
+          .row.col.s8
+            .input-field
+              = f.label :email
+              = f.text_field :email, class: 'validate'
+          .row.col.s8
+            .row.col.l4
+              button.btn.waves-effect.waves-light
+                = f.submit "Сохранить", class: 'actions white-text'
+            .row.col.l6
+              button.btn.waves-effect.waves-light
+                = link_to 'Сменить пароль', edit_user_registration_path, class: 'white-text'
+            .row.col.l4
+              button.btn.waves-effect.waves-light
+                = link_to 'Назад', :back, class: 'white-text'

@@ -9,7 +9,7 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    nav.amber.accent-2 role="navigation"
+    nav.orange.accent-2 role="navigation"
       .nav-wrapper.container
         #logo-container.brand-logo.left
           = link_to image_tag('pizza-logo.png'), root_path
@@ -19,7 +19,7 @@ html
               = link_to material_icon.shopping_cart, root_path
             - if user_signed_in?
               li
-                = link_to 'Профиль', current_user
+                = link_to current_user.name , current_user
               li
                 = link_to 'Выход', destroy_user_session_path, method: :delete
             - else
@@ -29,7 +29,7 @@ html
                 = link_to 'Зарегистрироваться', new_user_registration_path
     main
       = yield
-    footer.page-footer.footer-bottom.amber.accent-2.lime-text.text-darken-4
+    footer.page-footer.footer-bottom.orange.accent-2.green-text.text-darken-4
       .container
         .row
           .col.l6.s12
@@ -43,7 +43,7 @@ html
             ul
               li link
               li link
-      .footer-copyright.center.lime-text.text-darken-4
+      .footer-copyright.center.green-text.text-darken-4
         .container
           p.
             | &copy;

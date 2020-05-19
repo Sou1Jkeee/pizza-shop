@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
+gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rmagick'
 gem 'sass-rails', '~> 5.0'
@@ -21,7 +22,6 @@ gem 'material_icons'
 gem 'materialize-sass'
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -36,7 +36,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end
 
 group :development do
