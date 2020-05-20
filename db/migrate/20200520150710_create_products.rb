@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.string :image
-      t.boolean :availability
+      t.boolean :availability, default: true
 
       t.timestamps
     end

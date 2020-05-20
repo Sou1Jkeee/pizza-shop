@@ -5,6 +5,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 
+gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
