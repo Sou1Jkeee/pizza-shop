@@ -1,24 +1,26 @@
 .row
   h1.center Редактирование профиля
-  = form_for(@user, multipart: true) do |f|
-      .row.col.s4
-      .row.col.s6
-        form
-          .row.col.s8
-            .input-field
-              = f.label :name
-              = f.text_field :name, class: 'validate'
-          .row.col.s8
-            .input-field
-              = f.label :email
-              = f.text_field :email, class: 'validate'
-          .row.col.s8
-            .row.col.l4
-              button.btn.waves-effect.waves-light
-                = f.submit "Сохранить", class: 'actions white-text'
-            .row.col.l6
-              button.btn.waves-effect.waves-light
-                = link_to 'Сменить пароль', edit_user_registration_path, class: 'white-text'
-            .row.col.l4
-              button.btn.waves-effect.waves-light
-                = link_to 'Назад', :back, class: 'white-text'
+  .center
+    = render "devise/shared/error_messages", resource: current_user
+  .row.col.s3
+  .row.col.s9
+    = form_for(@user, multipart: true) do |f|
+      form
+        .row.col.s8
+          .input-field
+            = f.label :name
+            = f.text_field :name
+        .row.col.s8
+          .input-field
+            = f.label :email
+            = f.text_field :email, disabled: :email
+        .row.col.s8
+          .row
+            button.btn.waves-effect.waves-light
+              = f.submit "Сохранить", class: 'actions white-text'
+          .row
+            button.btn.waves-effect.waves-light
+              = link_to 'Сменить пароль', edit_user_registration_path, class: 'white-text'
+          .row
+            button.btn.waves-effect.waves-light
+              = link_to 'Назад', :back, class: 'white-text'

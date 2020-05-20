@@ -1,0 +1,33 @@
+.row
+  h1.center Редактирование пароля
+  .center
+    = render "devise/shared/error_messages", resource: resource
+  .row.col.s3
+  .row.col.s9
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      .row.col.s8
+        .input-field
+          = f.label :password, "Новый пароль"
+          = f.password_field :password, autocomplete: "new-password"
+          - if @minimum_password_length
+            em.helper-text
+              | (#{@minimum_password_length} characters minimum)
+          i.helper-text
+            | leave blank if you don't want to change it
+      .row.col.s8
+        .input-field
+          = f.label :password_confirmation, "Подтверждение пароля"
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+      .row.col.s8
+        .input-field
+          = f.label :current_password, "Текущий пароль"
+          = f.password_field :current_password, autocomplete: "current-password"
+          i.helper-text
+              | we need your current password to confirm your changes
+        .row.col.s8
+          .row
+            button.actions.btn-small.waves-effect.waves-light
+              = f.submit "Обновить", class: 'white-text'
+          .row
+            button.btn-small.waves-effect.waves-light
+              = link_to "Назад", :back, class: 'white-text'

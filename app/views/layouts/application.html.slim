@@ -19,7 +19,7 @@ html
               = link_to material_icon.shopping_cart, root_path
             - if user_signed_in?
               li
-                = link_to current_user.name , current_user
+                = link_to current_user.name, edit_user_path(current_user)
               li
                 = link_to 'Выход', destroy_user_session_path, method: :delete
             - else

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users # only: %i[index show edit update]
+  resources :users, except: %i[destroy]
 
   root 'users#index'
 end
