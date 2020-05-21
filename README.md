@@ -1,5 +1,8 @@
 # README
 
+## About
+Testing my skills, and try create PizzaShop w\o ERB and Bootstrap using: Slim, Postgres, Materialize
+
 ## **Versions used**
 * `ruby` **-** 2.6.5
 * `rails` **-** 5.2.4
