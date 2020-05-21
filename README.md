@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## **Versions used**
+* `ruby` **-** 2.6.5
+* `rails` **-** 5.2.4
+* `Bundler` **-** 2.1.4
+* `PostgreSQL` **-** 10.12
 
-Things you may want to cover:
+## **Installation**
+1.  Download or fork the repository.
 
-* Ruby version
+2. In the command line go to the directory with the files downloaded. Then use commands:
+    1. `bundle install`
+    2. `bundle exec rake db:migrate`
+    3. `bundle exec rails s`
+3. Open browser, and test app.
 
-* System dependencies
+### **To-do list:**
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [x] **Add Materialize SCSS and Icons**
+- [x] **Add devise**
+- [x] **Replace `ERB` -> `Slim` views**
+- [x] **Add Imageuploader**
+- [] Add admins group for creating products.
+- [] Add seeds for dev
+- [] Add the ability to download products in `xml` or `xls`
+- [] *Maybe add stub to online payment*
