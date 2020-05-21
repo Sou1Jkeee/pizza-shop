@@ -11,14 +11,13 @@ Testing my skills, and try create PizzaShop w\o ERB and Bootstrap using: Slim, P
 
 ## **Installation**
 1.  Download or fork the repository.
-
 2. In the command line go to the directory with the files downloaded. Then use commands:
     1. `bundle install`
     2. `bundle exec rake db:migrate`
     3. `bundle exec rails s`
 3. Open browser, and test app.
 
-### **To-do list:**
+## **To-do list:**
 
 - [x] **Add Materialize SCSS and Icons**
 - [x] **Add devise**
@@ -26,5 +25,6 @@ Testing my skills, and try create PizzaShop w\o ERB and Bootstrap using: Slim, P
 - [x] **Add Imageuploader**
 - [] Add admins group for creating products.
 - [] Add seeds for dev
-- [] Add the ability to download products in `xml` or `xls`
-- [] *Maybe add stub to online payment*
+- [] Add ability to download products in `xml` or `xls`
+- [] Add Cart
+- [] *Maybethe add stub to online payment*
