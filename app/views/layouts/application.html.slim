@@ -28,6 +28,8 @@ html
               li
                 = link_to 'Зарегистрироваться', new_user_registration_path
     main
+      p.center.green-text.text-darken-4#notice
+          = notice
       = yield
     footer.page-footer.footer-bottom.orange.accent-2.green-text.text-darken-4
       .container

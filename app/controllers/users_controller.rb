@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: %i[show]
-  before_action :set_current_user,   except: %i[show]
+  before_action :authenticate_user!
+  before_action :set_current_user
 
   def index
-    @users = User.all
+    redirect_to root_path
   end
 
   def show
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to root_path, notice: 'User was successfully updated.'
     else
       render :edit
     end

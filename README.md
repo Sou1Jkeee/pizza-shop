@@ -27,4 +27,4 @@ Testing my skills, and try create PizzaShop w\o ERB and Bootstrap using: Slim, P
 - [] Add seeds for dev
 - [] Add ability to download products in `xml` or `xls`
 - [] Add Cart
-- [] *Maybethe add stub to online payment*
+- [] *Maybe add stub to online payment*
