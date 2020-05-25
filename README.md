@@ -23,7 +23,7 @@ Testing my skills, and try create PizzaShop w\o ERB and Bootstrap using: Slim, P
 - [x] **Add devise**
 - [x] **Replace `ERB` -> `Slim` views**
 - [x] **Add Imageuploader**
-- [] Add admins group for creating products.
+- [x] Add admins group for creating products.
 - [] Add seeds for dev
 - [] Add ability to download products in `xml` or `xls`
 - [] Add Cart

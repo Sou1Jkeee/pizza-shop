@@ -16,6 +16,9 @@ html
         ul.right
           ul
             li
+              - if current_user.try(:admin?)
+                = link_to  'Admin Panel', '/admin', class: 'red-text text-darken-3'
+            li
               = link_to material_icon.shopping_cart, root_path
             - if user_signed_in?
               li

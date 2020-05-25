@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :admin?, except: %i[show index]
 
   def index
     @products = Product.all
@@ -39,6 +40,10 @@ class ProductsController < ApplicationController
   end
 
 private
+  def admin?
+    current_user.try(:admin) ? true : (redirect_to root_path, notice: 'Вам сюда нельзя')
+  end
+
   def set_product
     @product = Product.find(params[:id])
   end
