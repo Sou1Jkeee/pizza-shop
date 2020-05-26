@@ -10,7 +10,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
 gem 'pg'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rails_admin'
 gem "rails_admin_import", "~> 2.2"
 gem 'rmagick'
