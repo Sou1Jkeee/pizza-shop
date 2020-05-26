@@ -23,8 +23,11 @@ Testing my skills, and try create PizzaShop w\o ERB and Bootstrap using: Slim, P
 - [x] **Add devise**
 - [x] **Replace `ERB` -> `Slim` views**
 - [x] **Add Imageuploader**
-- [x] Add admins group for creating products.
-- [] Add seeds for dev
-- [] Add ability to download products in `xml` or `xls`
+- [x] **Add admins group for creating products.**
+- [x] **Add seeds for dev**
+- [x] **Add ability to download products in `csv`**
 - [] Add Cart
+- [] *Maybe add sidekiq jobs for import*
 - [] *Maybe add stub to online payment*
+- [] Add AWS bucket
+- [] Run app at VPS using nginx, passenger

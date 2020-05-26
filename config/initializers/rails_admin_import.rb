@@ -20,6 +20,7 @@ RailsAdmin.config do |config|
     show
     edit
     delete
+    import
     # export
     # show_in_app
 
